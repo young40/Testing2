@@ -91,6 +91,11 @@ function DataSource:ctor()
 end
 
 function MainScene:onCreate()
+    MainView:create():addTo(self)
+
+    if true then return end
+
+
     -- add background image
     display.newSprite("HelloWorld.png")
         :move(display.center)
