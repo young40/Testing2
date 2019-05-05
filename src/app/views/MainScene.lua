@@ -1,6 +1,8 @@
 
 local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 
+local MainView = require("app/main/MainView")
+
 local function bind(node, nodeFunc, t, key)
     local mt = getmetatable(t) or {}
     dump(mt)

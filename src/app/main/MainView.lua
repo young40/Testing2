@@ -1,4 +1,4 @@
-local BaseView = require("package/mvvm/BaseView")
+local BaseView = require("packages/mvvm/BaseView")
 
 local MainView = class("MainView", BaseView)
 
