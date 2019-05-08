@@ -1,12 +1,8 @@
-local BaseView = require("packages/mvvm/BaseView")
-
-function cc.Sprite:bindFile()
-    print("oooooooooo")
-end
+local BaseView = cc.load("mvvm").BaseView
 
 local MainView = class("MainView", BaseView)
 
-function MainView:onCreate()
+function MainView:initView()
     self.sprHelloWorld = display.newSprite("HelloWorld.png")
         :move(display.center)
         :addTo(self):bindFile()
@@ -18,6 +14,9 @@ function MainView:onCreate()
     self.lblHelloThanks = cc.Label:createWithSystemFont("Hello 谢谢", "Arial", 40)
         :move(display.cx, display.cy + 100)
         :addTo(self)
+end
+
+function MainView:initBind()
 end
 
 return MainView
