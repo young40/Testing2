@@ -1,6 +1,8 @@
 local BaseView = class("BaseView", cc.Node)
 
-function BaseView:ctor()
+function BaseView:ctor(vo)
+    self.vo = vo
+
     if self.initView then
         assert(type(self.initView) == "function", "initView should be function")
 

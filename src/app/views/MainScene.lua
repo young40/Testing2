@@ -1,7 +1,8 @@
 
 local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 
-local MainView = require("app/main/MainView")
+local MainView       = require("app/main/MainView")
+local MainViewObject = require("app/main/MainViewObject")
 
 local function bind(node, nodeFunc, t, key)
     local mt = getmetatable(t) or {}
@@ -91,7 +92,9 @@ function DataSource:ctor()
 end
 
 function MainScene:onCreate()
-    MainView:create():addTo(self)
+    self.vo   = MainViewObject.new()
+
+    self.view = MainView:create(self.vo):addTo(self)
 
     if true then return end
 

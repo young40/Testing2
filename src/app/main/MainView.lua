@@ -1,5 +1,6 @@
 local BaseView = cc.load("mvvm").BaseView
 
+---@class MainView
 local MainView = class("MainView", BaseView)
 
 function MainView:initView()
