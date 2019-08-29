@@ -5,7 +5,7 @@ local MainView = class("MainView", BaseView)
 function MainView:initView()
     self.sprHelloWorld = display.newSprite("HelloWorld.png")
         :move(display.center)
-        :addTo(self):bindFile()
+        :addTo(self)
 
     self.lblHelloWorld = cc.Label:createWithSystemFont("Hello World", "Arial", 40)
         :move(display.cx, display.cy + 200)
